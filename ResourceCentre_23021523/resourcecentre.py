@@ -44,8 +44,27 @@ class ResourceCenter:
         option = int(input("Enter option to select item type >"))
         return option
 
+
+    def printHeader(self,message):
+         # Refactor (B): use printHeader(mesage)
+        print("")
+        print("==============================================")
+        print(message)
+        print("==============================================")
+
+    def selectItemType():
+        # Refactor (B): Extract duplicate codes to selectItemType(),
+        # return the option selected.
+        # Advance refactoring: error chekcing in selectItemType().
+        print("\nItem types:")
+        print("1. Digital Camera")
+        print("2. Laptop")
+        option = int(input("Enter option to select item type >"))
+        return option
+    
     def main(self):
         # Refactor (A): Extract constants for choice integers
+<<<<<<< HEAD
         CHOICE_ADD = 1
         CHOICE_VIEW = 2
         CHOICE_LOAN = 3
@@ -54,6 +73,16 @@ class ResourceCenter:
         # Refactor (A): Extract constants for option integers
         OPTION_CAMERA = 1
         OPTION_LAPTOP = 2
+=======
+        CHOICE_ADD=1
+        CHOICE_VIEW=2
+        CHOICE_LOAN=3
+        CHOICE_RETURN=4
+        CHOICE_QUIT=5
+        # Refactor (A): Extract constants for option integers
+        OPTION_CAMERA=1
+        OPTION_LAPTOP=2
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
         #### Menu driven application ####
         # Display menu and obtain menu choices
         choice = self.display_menu()
@@ -62,11 +91,21 @@ class ResourceCenter:
 
             if choice == CHOICE_ADD:
                 # Refactor (B): use printHeader(mesage)
+<<<<<<< HEAD
                 self.printHeader("Add an item")
+=======
+
+                self.printHeader("Add an item")
+
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 
                 # Refactor (B): Extract duplicate codes to selectItemType(),
                 # return the option selected.
                 # Advance refactoring: error chekcing in selectItemType().
+<<<<<<< HEAD
+=======
+
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 option = self.selectItemType()
 
                 # TO-DO: Write the code to ADD a digital camera or laptop.
@@ -95,17 +134,29 @@ class ResourceCenter:
             
             elif choice == CHOICE_VIEW:
                 # Refactor (B): Extract duplicate codes to printHeader(message)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 self.printHeader("Display all items")
 
                 # TO-DO: Write the code to ADD a camcorder or chrome book.
                 
             elif choice == CHOICE_LOAN:
                 # Refactor (B): use printHeader(mesage)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 self.printHeader("Loan an item")
                 
                 # Refactor (B): use selectItemType()
                 option = self.selectItemType()
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
 
                 # TO-DO: Write the code to LOAN a camcorder or chrome book
                 if option == OPTION_CAMERA:
@@ -136,16 +187,30 @@ class ResourceCenter:
                 
             elif choice == CHOICE_RETURN:
                 # Refactor (B): use printHeader(mesage)
+<<<<<<< HEAD
                 self.printHeader("Return an item")
                 
                 # Refactor (B): use selectItemType()
                 option = self.selectItemType()
+=======
+
+                self.printHeader("Return an item")
+
+                
+                # Refactor (B): use selectItemType()
+                option = self.selectItemType()
+            
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
 
                 # TO-DO: Write the code to RETURN a camcorder or chrome book
                 if option == OPTION_CAMERA:
                     # Refactor (F): create and use proper method to display loaned camera.
                     # Don't forget to create a pytest for this new method.
+<<<<<<< HEAD
                     print(self.inventory.getNotAvailabeCamera())
+=======
+                    print(self.inventory.getNotAvailableCamera())
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
 
                     assetTag = input("Enter asset tag >")
 
@@ -158,12 +223,7 @@ class ResourceCenter:
                 elif option == OPTION_LAPTOP:
                     # Refactor (F): create and use proper method to display loaned Laptop.
                     # Don't forget to create a pytest for this new method.
-                    print("{:<10}{:<30}{:<10}{:<12}{:<10}".format("AssetTag", 
-                          "Description", "Available", "Due Date", "OS"))
-                    for i in self.inventory.laptopList:
-                        if i.getIsAvailable() == "No":
-                            print("{:<10}{:<30}{:<10}{:<12}{:<10}".format(i.getAssetTag(), \
-                            i.getDescription() , i.getIsAvailable(), i.getDueDate(), i.getOs() ))
+                    print(self.inventory.getNotAvailableLaptop)
 
                     assetTag = input("Enter asset tag >")
 

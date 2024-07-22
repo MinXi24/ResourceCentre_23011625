@@ -18,4 +18,8 @@ class Laptop(Item):
 
     def __str__(self):
         return super().__str__() + "{:<10}\n".format(
+<<<<<<< HEAD
+=======
+
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                         self.getOS() )

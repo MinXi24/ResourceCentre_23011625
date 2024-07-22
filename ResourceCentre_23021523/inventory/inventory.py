@@ -166,3 +166,7 @@ class Inventory():
 
     def returnLaptop(self, assetTag):
        return self.returnAsset(assetTag)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
