@@ -64,7 +64,6 @@ class ResourceCenter:
     
     def main(self):
         # Refactor (A): Extract constants for choice integers
-<<<<<<< HEAD
         CHOICE_ADD = 1
         CHOICE_VIEW = 2
         CHOICE_LOAN = 3
@@ -73,7 +72,7 @@ class ResourceCenter:
         # Refactor (A): Extract constants for option integers
         OPTION_CAMERA = 1
         OPTION_LAPTOP = 2
-=======
+
         CHOICE_ADD=1
         CHOICE_VIEW=2
         CHOICE_LOAN=3
@@ -82,7 +81,7 @@ class ResourceCenter:
         # Refactor (A): Extract constants for option integers
         OPTION_CAMERA=1
         OPTION_LAPTOP=2
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
+
         #### Menu driven application ####
         # Display menu and obtain menu choices
         choice = self.display_menu()
@@ -91,21 +90,17 @@ class ResourceCenter:
 
             if choice == CHOICE_ADD:
                 # Refactor (B): use printHeader(mesage)
-<<<<<<< HEAD
-                self.printHeader("Add an item")
-=======
 
                 self.printHeader("Add an item")
 
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
+
+                self.printHeader("Add an item")
+
                 
                 # Refactor (B): Extract duplicate codes to selectItemType(),
                 # return the option selected.
                 # Advance refactoring: error chekcing in selectItemType().
-<<<<<<< HEAD
-=======
 
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 option = self.selectItemType()
 
                 # TO-DO: Write the code to ADD a digital camera or laptop.
@@ -134,29 +129,17 @@ class ResourceCenter:
             
             elif choice == CHOICE_VIEW:
                 # Refactor (B): Extract duplicate codes to printHeader(message)
-<<<<<<< HEAD
-=======
-
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 self.printHeader("Display all items")
 
                 # TO-DO: Write the code to ADD a camcorder or chrome book.
                 
             elif choice == CHOICE_LOAN:
                 # Refactor (B): use printHeader(mesage)
-<<<<<<< HEAD
-=======
 
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
                 self.printHeader("Loan an item")
                 
                 # Refactor (B): use selectItemType()
                 option = self.selectItemType()
-<<<<<<< HEAD
-
-=======
-                
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
 
                 # TO-DO: Write the code to LOAN a camcorder or chrome book
                 if option == OPTION_CAMERA:
@@ -187,30 +170,24 @@ class ResourceCenter:
                 
             elif choice == CHOICE_RETURN:
                 # Refactor (B): use printHeader(mesage)
-<<<<<<< HEAD
+
                 self.printHeader("Return an item")
                 
                 # Refactor (B): use selectItemType()
                 option = self.selectItemType()
-=======
 
                 self.printHeader("Return an item")
 
                 
                 # Refactor (B): use selectItemType()
                 option = self.selectItemType()
-            
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
 
                 # TO-DO: Write the code to RETURN a camcorder or chrome book
                 if option == OPTION_CAMERA:
                     # Refactor (F): create and use proper method to display loaned camera.
                     # Don't forget to create a pytest for this new method.
-<<<<<<< HEAD
                     print(self.inventory.getNotAvailabeCamera())
-=======
                     print(self.inventory.getNotAvailableCamera())
->>>>>>> 737a8e9a586429d7951a2262179bbede525dfe84
 
                     assetTag = input("Enter asset tag >")
 
